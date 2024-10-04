@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue May 21 09:28:53 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Standard Edition
+Revision Name : CRONOMETRUINVERS
+Top-level Entity Name : CRONOMETRUINVERS
+Family : Cyclone IV E
+Device : EP4CE6E22C6
+Timing Models : Final
+Total logic elements : 67 / 6,272 ( 1 % )
+    Total combinational functions : 66 / 6,272 ( 1 % )
+    Dedicated logic registers : 21 / 6,272 ( < 1 % )
+Total registers : 21
+Total pins : 38 / 92 ( 41 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

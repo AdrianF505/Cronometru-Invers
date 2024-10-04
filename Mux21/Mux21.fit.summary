@@ -1,0 +1,19 @@
+Fitter Status : Successful - Wed Feb 08 21:07:22 2023
+Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+Revision Name : Mux21
+Top-level Entity Name : Mux21
+Family : Arria GX
+Device : EP1AGX20CF484C6
+Timing Models : Final
+Logic utilization : < 1 %
+    Combinational ALUTs : 1 / 17,264 ( < 1 % )
+    Dedicated logic registers : 0 / 17,264 ( 0 % )
+Total registers : 0
+Total pins : 4 / 255 ( 2 % )
+Total virtual pins : 0
+Total block memory bits : 0 / 1,229,184 ( 0 % )
+DSP block 9-bit elements : 0 / 80 ( 0 % )
+Total GXB Receiver Channels : 0 / 4 ( 0 % )
+Total GXB Transmitter Channels : 0 / 4 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, E:/inceput proiect/Divizor Frecventa/divizor10/div10.bdf
+source_file = 1, E:/inceput proiect/Divizor Frecventa/divizor10/Waveform.vwf
+source_file = 1, E:/inceput proiect/Divizor Frecventa/divizor10/db/div10.cbx.xml
+design_name = hard_block
+design_name = div10
+instance = comp, \q3~output\, q3~output, div10, 1
+instance = comp, \pin_name1~input\, pin_name1~input, div10, 1
+instance = comp, \pin_name1~inputclkctrl\, pin_name1~inputclkctrl, div10, 1
+instance = comp, \inst~0\, inst~0, div10, 1
+instance = comp, \inst1~0\, inst1~0, div10, 1
+instance = comp, \inst2~0\, inst2~0, div10, 1
+instance = comp, \inst3~0\, inst3~0, div10, 1

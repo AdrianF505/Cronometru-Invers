@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ds1",
+					"strict" : false
+				},
+				{
+					"name" : "ds0",
+					"strict" : false
+				},
+				{
+					"name" : "ds3",
+					"strict" : false
+				},
+				{
+					"name" : "ds2",
+					"strict" : false
+				},
+				{
+					"name" : "s1",
+					"strict" : false
+				},
+				{
+					"name" : "s2",
+					"strict" : false
+				},
+				{
+					"name" : "s0",
+					"strict" : false
+				},
+				{
+					"name" : "s3",
+					"strict" : false
+				},
+				{
+					"name" : "zs2",
+					"strict" : false
+				},
+				{
+					"name" : "zs1",
+					"strict" : false
+				},
+				{
+					"name" : "zs0",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

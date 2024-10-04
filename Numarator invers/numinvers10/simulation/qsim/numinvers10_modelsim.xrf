@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, E:/inceput proiect/Numarator invers/numinvers10/numinvers10.bdf
+source_file = 1, E:/inceput proiect/Numarator invers/numinvers10/db/numinvers10.cbx.xml
+design_name = hard_block
+design_name = numinvers10
+instance = comp, \q0~output\, q0~output, numinvers10, 1
+instance = comp, \q1~output\, q1~output, numinvers10, 1
+instance = comp, \q2~output\, q2~output, numinvers10, 1
+instance = comp, \q3~output\, q3~output, numinvers10, 1
+instance = comp, \ck~input\, ck~input, numinvers10, 1
+instance = comp, \ck~inputclkctrl\, ck~inputclkctrl, numinvers10, 1
+instance = comp, \inst~0\, inst~0, numinvers10, 1
+instance = comp, \reset~input\, reset~input, numinvers10, 1
+instance = comp, \reset~inputclkctrl\, reset~inputclkctrl, numinvers10, 1
+instance = comp, \inst2~0\, inst2~0, numinvers10, 1
+instance = comp, \inst3~0\, inst3~0, numinvers10, 1
+instance = comp, \inst1~0\, inst1~0, numinvers10, 1

@@ -1,0 +1,12 @@
+vendor_name = ModelSim
+source_file = 1, E:/inceput proiect/numarator3/numarator3.bdf
+source_file = 1, E:/inceput proiect/numarator3/Waveform.vwf
+source_file = 1, E:/inceput proiect/numarator3/numarator3.vwf
+source_file = 1, E:/inceput proiect/numarator3/db/numarator3.cbx.xml
+design_name = hard_block
+design_name = numarator3
+instance = comp, \q1~output\, q1~output, numarator3, 1
+instance = comp, \pin_name1~input\, pin_name1~input, numarator3, 1
+instance = comp, \pin_name1~inputclkctrl\, pin_name1~inputclkctrl, numarator3, 1
+instance = comp, \inst~0\, inst~0, numarator3, 1
+instance = comp, \inst1~0\, inst1~0, numarator3, 1

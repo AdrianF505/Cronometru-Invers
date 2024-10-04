@@ -1,0 +1,161 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "A",
+					"strict" : false
+				},
+				{
+					"name" : "B",
+					"strict" : false
+				},
+				{
+					"name" : "C",
+					"strict" : false
+				},
+				{
+					"name" : "D",
+					"strict" : false
+				},
+				{
+					"name" : "E",
+					"strict" : false
+				},
+				{
+					"name" : "F",
+					"strict" : false
+				},
+				{
+					"name" : "G",
+					"strict" : false
+				},
+				{
+					"name" : "I0",
+					"strict" : false
+				},
+				{
+					"name" : "I1",
+					"strict" : false
+				},
+				{
+					"name" : "I2",
+					"strict" : false
+				},
+				{
+					"name" : "I3",
+					"strict" : false
+				},
+				{
+					"name" : "I4",
+					"strict" : false
+				},
+				{
+					"name" : "m1",
+					"strict" : false
+				},
+				{
+					"name" : "m2",
+					"strict" : false
+				},
+				{
+					"name" : "m0",
+					"strict" : false
+				},
+				{
+					"name" : "m3",
+					"strict" : false
+				},
+				{
+					"name" : "zm1",
+					"strict" : false
+				},
+				{
+					"name" : "zm2",
+					"strict" : false
+				},
+				{
+					"name" : "zm0",
+					"strict" : false
+				},
+				{
+					"name" : "ds0",
+					"strict" : false
+				},
+				{
+					"name" : "ds1",
+					"strict" : false
+				},
+				{
+					"name" : "s3",
+					"strict" : false
+				},
+				{
+					"name" : "s2",
+					"strict" : false
+				},
+				{
+					"name" : "s1",
+					"strict" : false
+				},
+				{
+					"name" : "s0",
+					"strict" : false
+				},
+				{
+					"name" : "ds3",
+					"strict" : false
+				},
+				{
+					"name" : "ds2",
+					"strict" : false
+				},
+				{
+					"name" : "zs2",
+					"strict" : false
+				},
+				{
+					"name" : "zs1",
+					"strict" : false
+				},
+				{
+					"name" : "zs0",
+					"strict" : false
+				},
+				{
+					"name" : "Frecventa",
+					"strict" : false
+				},
+				{
+					"name" : "set",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "Start/Stop",
+					"strict" : false
+				},
+				{
+					"name" : "tact",
+					"strict" : false
+				},
+				{
+					"name" : "Incrementaremin",
+					"strict" : false
+				},
+				{
+					"name" : "incrementarezecimin",
+					"strict" : false
+				},
+				{
+					"name" : "incrementaresec",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

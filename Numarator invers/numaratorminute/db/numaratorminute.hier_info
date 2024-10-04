@@ -1,0 +1,62 @@
+|numaratorminute
+m1 <= numinvers10:inst1.q1
+set => numinvers10:inst1.set
+set => num6invers:inst.Set
+Tact => Mux21:inst2.I1
+Tact => Mux21:inst3.I1
+clk => Mux21:inst2.I0
+IncrementareUnitatiMinute => Mux21:inst2.A
+reset => numinvers10:inst1.reset
+reset => num6invers:inst.reset
+m2 <= numinvers10:inst1.q2
+m0 <= numinvers10:inst1.q0
+m3 <= numinvers10:inst1.q3
+zm0 <= num6invers:inst.q0
+IncrementareZeciMinute => Mux21:inst3.A
+zm1 <= num6invers:inst.q1
+zm2 <= num6invers:inst.q2
+iesire <= num6invers:inst.q2
+
+
+|numaratorminute|numinvers10:inst1
+q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+set => inst.PRESET
+set => inst3.PRESET
+reset => inst.ACLR
+reset => inst1.ACLR
+reset => inst2.ACLR
+reset => inst3.ACLR
+ck => inst15.IN0
+q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|numaratorminute|Mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+I0 => inst3.IN0
+A => inst4.IN0
+A => inst.IN1
+I1 => inst.IN0
+
+
+|numaratorminute|num6invers:inst
+q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Set => inst.PRESET
+Set => inst2.PRESET
+reset => inst.ACLR
+reset => inst1.ACLR
+reset => inst2.ACLR
+ck => inst5.IN0
+q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|numaratorminute|Mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+I0 => inst3.IN0
+A => inst4.IN0
+A => inst.IN1
+I1 => inst.IN0
+
+

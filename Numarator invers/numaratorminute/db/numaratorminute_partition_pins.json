@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "m1",
+					"strict" : false
+				},
+				{
+					"name" : "m2",
+					"strict" : false
+				},
+				{
+					"name" : "m0",
+					"strict" : false
+				},
+				{
+					"name" : "m3",
+					"strict" : false
+				},
+				{
+					"name" : "zm0",
+					"strict" : false
+				},
+				{
+					"name" : "zm1",
+					"strict" : false
+				},
+				{
+					"name" : "zm2",
+					"strict" : false
+				},
+				{
+					"name" : "iesire",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "set",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

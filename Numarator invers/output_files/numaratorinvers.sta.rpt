@@ -1,0 +1,471 @@
+TimeQuest Timing Analyzer report for numaratorinvers
+Thu Feb 16 00:11:35 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Clock to Output Times
+ 12. Minimum Clock to Output Times
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Multicorner Timing Analysis Summary
+ 21. Clock to Output Times
+ 22. Minimum Clock to Output Times
+ 23. Setup Transfers
+ 24. Hold Transfers
+ 25. Report TCCS
+ 26. Report RSKM
+ 27. Unconstrained Paths
+ 28. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                   ;
++--------------------+----------------------------------------------------------------+
+; Quartus II Version ; Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition ;
+; Revision Name      ; numaratorinvers                                                ;
+; Device Family      ; Arria GX                                                       ;
+; Device Name        ; EP1AGX20CF484C6                                                ;
+; Timing Models      ; Final                                                          ;
+; Delay Model        ; Combined                                                       ;
+; Rise/Fall Delays   ; Unavailable                                                    ;
++--------------------+----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                       ;
++-----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------+
+; Clock Name            ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                   ;
++-----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------+
+; clk                   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                   ;
+; IncrementareSecunde   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { IncrementareSecunde }   ;
+; numinvers10:inst|inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { numinvers10:inst|inst } ;
++-----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                              ;
++------------+-----------------+-----------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name            ; Note                                                          ;
++------------+-----------------+-----------------------+---------------------------------------------------------------+
+; 692.52 MHz ; 570.13 MHz      ; numinvers10:inst|inst ; limit due to high minimum pulse width violation (tch)         ;
+; 746.27 MHz ; 373.83 MHz      ; clk                   ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 798.72 MHz ; 373.83 MHz      ; IncrementareSecunde   ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+-----------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------------+
+; Slow Model Setup Summary                       ;
++-----------------------+--------+---------------+
+; Clock                 ; Slack  ; End Point TNS ;
++-----------------------+--------+---------------+
+; numinvers10:inst|inst ; -0.444 ; -1.000        ;
+; clk                   ; -0.340 ; -0.768        ;
+; IncrementareSecunde   ; -0.252 ; -0.496        ;
++-----------------------+--------+---------------+
+
+
++------------------------------------------------+
+; Slow Model Hold Summary                        ;
++-----------------------+--------+---------------+
+; Clock                 ; Slack  ; End Point TNS ;
++-----------------------+--------+---------------+
+; clk                   ; -0.015 ; -0.040        ;
+; IncrementareSecunde   ; 0.490  ; 0.000         ;
+; numinvers10:inst|inst ; 0.490  ; 0.000         ;
++-----------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary         ;
++-----------------------+--------+---------------+
+; Clock                 ; Slack  ; End Point TNS ;
++-----------------------+--------+---------------+
+; clk                   ; -1.675 ; -4.691        ;
+; IncrementareSecunde   ; -1.675 ; -3.937        ;
+; numinvers10:inst|inst ; -0.377 ; -3.016        ;
++-----------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                    ;
++-----------+-----------------------+--------+--------+------------+-----------------------+
+; Data Port ; Clock Port            ; Rise   ; Fall   ; Clock Edge ; Clock Reference       ;
++-----------+-----------------------+--------+--------+------------+-----------------------+
+; zs0       ; IncrementareSecunde   ; 10.131 ; 10.131 ; Fall       ; IncrementareSecunde   ;
+; zs1       ; IncrementareSecunde   ; 12.554 ; 12.554 ; Fall       ; IncrementareSecunde   ;
+; zs2       ; IncrementareSecunde   ; 10.072 ; 10.072 ; Fall       ; IncrementareSecunde   ;
+; ds1       ; clk                   ; 8.351  ; 8.351  ; Fall       ; clk                   ;
+; ds2       ; clk                   ; 9.317  ; 9.317  ; Fall       ; clk                   ;
+; ds3       ; clk                   ; 9.283  ; 9.283  ; Fall       ; clk                   ;
+; ds0       ; numinvers10:inst|inst ; 7.357  ;        ; Rise       ; numinvers10:inst|inst ;
+; s0        ; numinvers10:inst|inst ; 7.570  ; 7.570  ; Rise       ; numinvers10:inst|inst ;
+; s1        ; numinvers10:inst|inst ; 9.067  ; 9.067  ; Rise       ; numinvers10:inst|inst ;
+; s2        ; numinvers10:inst|inst ; 8.992  ; 8.992  ; Rise       ; numinvers10:inst|inst ;
+; s3        ; numinvers10:inst|inst ; 8.993  ; 8.993  ; Rise       ; numinvers10:inst|inst ;
+; ds0       ; numinvers10:inst|inst ;        ; 7.357  ; Fall       ; numinvers10:inst|inst ;
++-----------+-----------------------+--------+--------+------------+-----------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                            ;
++-----------+-----------------------+--------+--------+------------+-----------------------+
+; Data Port ; Clock Port            ; Rise   ; Fall   ; Clock Edge ; Clock Reference       ;
++-----------+-----------------------+--------+--------+------------+-----------------------+
+; zs0       ; IncrementareSecunde   ; 10.131 ; 10.131 ; Fall       ; IncrementareSecunde   ;
+; zs1       ; IncrementareSecunde   ; 12.554 ; 12.554 ; Fall       ; IncrementareSecunde   ;
+; zs2       ; IncrementareSecunde   ; 10.072 ; 10.072 ; Fall       ; IncrementareSecunde   ;
+; ds1       ; clk                   ; 8.351  ; 8.351  ; Fall       ; clk                   ;
+; ds2       ; clk                   ; 9.317  ; 9.317  ; Fall       ; clk                   ;
+; ds3       ; clk                   ; 9.283  ; 9.283  ; Fall       ; clk                   ;
+; ds0       ; numinvers10:inst|inst ; 7.357  ;        ; Rise       ; numinvers10:inst|inst ;
+; s0        ; numinvers10:inst|inst ; 7.570  ; 7.570  ; Rise       ; numinvers10:inst|inst ;
+; s1        ; numinvers10:inst|inst ; 9.067  ; 9.067  ; Rise       ; numinvers10:inst|inst ;
+; s2        ; numinvers10:inst|inst ; 8.992  ; 8.992  ; Rise       ; numinvers10:inst|inst ;
+; s3        ; numinvers10:inst|inst ; 8.993  ; 8.993  ; Rise       ; numinvers10:inst|inst ;
+; ds0       ; numinvers10:inst|inst ;        ; 7.357  ; Fall       ; numinvers10:inst|inst ;
++-----------+-----------------------+--------+--------+------------+-----------------------+
+
+
++-----------------------------------------------+
+; Fast Model Setup Summary                      ;
++-----------------------+-------+---------------+
+; Clock                 ; Slack ; End Point TNS ;
++-----------------------+-------+---------------+
+; numinvers10:inst|inst ; 0.471 ; 0.000         ;
+; clk                   ; 0.496 ; 0.000         ;
+; IncrementareSecunde   ; 0.527 ; 0.000         ;
++-----------------------+-------+---------------+
+
+
++------------------------------------------------+
+; Fast Model Hold Summary                        ;
++-----------------------+--------+---------------+
+; Clock                 ; Slack  ; End Point TNS ;
++-----------------------+--------+---------------+
+; clk                   ; -0.158 ; -0.590        ;
+; IncrementareSecunde   ; 0.224  ; 0.000         ;
+; numinvers10:inst|inst ; 0.224  ; 0.000         ;
++-----------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary         ;
++-----------------------+--------+---------------+
+; Clock                 ; Slack  ; End Point TNS ;
++-----------------------+--------+---------------+
+; clk                   ; -1.000 ; -2.040        ;
+; IncrementareSecunde   ; -1.000 ; -1.780        ;
+; numinvers10:inst|inst ; -0.130 ; -1.040        ;
++-----------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                  ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+; Data Port ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+; zs0       ; IncrementareSecunde   ; 4.296 ; 4.296 ; Fall       ; IncrementareSecunde   ;
+; zs1       ; IncrementareSecunde   ; 5.187 ; 5.187 ; Fall       ; IncrementareSecunde   ;
+; zs2       ; IncrementareSecunde   ; 4.276 ; 4.276 ; Fall       ; IncrementareSecunde   ;
+; ds1       ; clk                   ; 3.636 ; 3.636 ; Fall       ; clk                   ;
+; ds2       ; clk                   ; 3.901 ; 3.901 ; Fall       ; clk                   ;
+; ds3       ; clk                   ; 3.889 ; 3.889 ; Fall       ; clk                   ;
+; ds0       ; numinvers10:inst|inst ; 3.160 ;       ; Rise       ; numinvers10:inst|inst ;
+; s0        ; numinvers10:inst|inst ; 3.365 ; 3.365 ; Rise       ; numinvers10:inst|inst ;
+; s1        ; numinvers10:inst|inst ; 3.640 ; 3.640 ; Rise       ; numinvers10:inst|inst ;
+; s2        ; numinvers10:inst|inst ; 3.739 ; 3.739 ; Rise       ; numinvers10:inst|inst ;
+; s3        ; numinvers10:inst|inst ; 3.612 ; 3.612 ; Rise       ; numinvers10:inst|inst ;
+; ds0       ; numinvers10:inst|inst ;       ; 3.160 ; Fall       ; numinvers10:inst|inst ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                          ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+; Data Port ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+; zs0       ; IncrementareSecunde   ; 4.296 ; 4.296 ; Fall       ; IncrementareSecunde   ;
+; zs1       ; IncrementareSecunde   ; 5.187 ; 5.187 ; Fall       ; IncrementareSecunde   ;
+; zs2       ; IncrementareSecunde   ; 4.276 ; 4.276 ; Fall       ; IncrementareSecunde   ;
+; ds1       ; clk                   ; 3.636 ; 3.636 ; Fall       ; clk                   ;
+; ds2       ; clk                   ; 3.901 ; 3.901 ; Fall       ; clk                   ;
+; ds3       ; clk                   ; 3.889 ; 3.889 ; Fall       ; clk                   ;
+; ds0       ; numinvers10:inst|inst ; 3.160 ;       ; Rise       ; numinvers10:inst|inst ;
+; s0        ; numinvers10:inst|inst ; 3.365 ; 3.365 ; Rise       ; numinvers10:inst|inst ;
+; s1        ; numinvers10:inst|inst ; 3.640 ; 3.640 ; Rise       ; numinvers10:inst|inst ;
+; s2        ; numinvers10:inst|inst ; 3.739 ; 3.739 ; Rise       ; numinvers10:inst|inst ;
+; s3        ; numinvers10:inst|inst ; 3.612 ; 3.612 ; Rise       ; numinvers10:inst|inst ;
+; ds0       ; numinvers10:inst|inst ;       ; 3.160 ; Fall       ; numinvers10:inst|inst ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                 ;
++------------------------+--------+--------+----------+---------+---------------------+
+; Clock                  ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack       ; -0.444 ; -0.158 ; N/A      ; N/A     ; -1.675              ;
+;  IncrementareSecunde   ; -0.252 ; 0.224  ; N/A      ; N/A     ; -1.675              ;
+;  clk                   ; -0.340 ; -0.158 ; N/A      ; N/A     ; -1.675              ;
+;  numinvers10:inst|inst ; -0.444 ; 0.224  ; N/A      ; N/A     ; -0.377              ;
+; Design-wide TNS        ; -2.264 ; -0.59  ; 0.0      ; 0.0     ; -11.644             ;
+;  IncrementareSecunde   ; -0.496 ; 0.000  ; N/A      ; N/A     ; -3.937              ;
+;  clk                   ; -0.768 ; -0.590 ; N/A      ; N/A     ; -4.691              ;
+;  numinvers10:inst|inst ; -1.000 ; 0.000  ; N/A      ; N/A     ; -3.016              ;
++------------------------+--------+--------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                    ;
++-----------+-----------------------+--------+--------+------------+-----------------------+
+; Data Port ; Clock Port            ; Rise   ; Fall   ; Clock Edge ; Clock Reference       ;
++-----------+-----------------------+--------+--------+------------+-----------------------+
+; zs0       ; IncrementareSecunde   ; 10.131 ; 10.131 ; Fall       ; IncrementareSecunde   ;
+; zs1       ; IncrementareSecunde   ; 12.554 ; 12.554 ; Fall       ; IncrementareSecunde   ;
+; zs2       ; IncrementareSecunde   ; 10.072 ; 10.072 ; Fall       ; IncrementareSecunde   ;
+; ds1       ; clk                   ; 8.351  ; 8.351  ; Fall       ; clk                   ;
+; ds2       ; clk                   ; 9.317  ; 9.317  ; Fall       ; clk                   ;
+; ds3       ; clk                   ; 9.283  ; 9.283  ; Fall       ; clk                   ;
+; ds0       ; numinvers10:inst|inst ; 7.357  ;        ; Rise       ; numinvers10:inst|inst ;
+; s0        ; numinvers10:inst|inst ; 7.570  ; 7.570  ; Rise       ; numinvers10:inst|inst ;
+; s1        ; numinvers10:inst|inst ; 9.067  ; 9.067  ; Rise       ; numinvers10:inst|inst ;
+; s2        ; numinvers10:inst|inst ; 8.992  ; 8.992  ; Rise       ; numinvers10:inst|inst ;
+; s3        ; numinvers10:inst|inst ; 8.993  ; 8.993  ; Rise       ; numinvers10:inst|inst ;
+; ds0       ; numinvers10:inst|inst ;        ; 7.357  ; Fall       ; numinvers10:inst|inst ;
++-----------+-----------------------+--------+--------+------------+-----------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                          ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+; Data Port ; Clock Port            ; Rise  ; Fall  ; Clock Edge ; Clock Reference       ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+; zs0       ; IncrementareSecunde   ; 4.296 ; 4.296 ; Fall       ; IncrementareSecunde   ;
+; zs1       ; IncrementareSecunde   ; 5.187 ; 5.187 ; Fall       ; IncrementareSecunde   ;
+; zs2       ; IncrementareSecunde   ; 4.276 ; 4.276 ; Fall       ; IncrementareSecunde   ;
+; ds1       ; clk                   ; 3.636 ; 3.636 ; Fall       ; clk                   ;
+; ds2       ; clk                   ; 3.901 ; 3.901 ; Fall       ; clk                   ;
+; ds3       ; clk                   ; 3.889 ; 3.889 ; Fall       ; clk                   ;
+; ds0       ; numinvers10:inst|inst ; 3.160 ;       ; Rise       ; numinvers10:inst|inst ;
+; s0        ; numinvers10:inst|inst ; 3.365 ; 3.365 ; Rise       ; numinvers10:inst|inst ;
+; s1        ; numinvers10:inst|inst ; 3.640 ; 3.640 ; Rise       ; numinvers10:inst|inst ;
+; s2        ; numinvers10:inst|inst ; 3.739 ; 3.739 ; Rise       ; numinvers10:inst|inst ;
+; s3        ; numinvers10:inst|inst ; 3.612 ; 3.612 ; Rise       ; numinvers10:inst|inst ;
+; ds0       ; numinvers10:inst|inst ;       ; 3.160 ; Fall       ; numinvers10:inst|inst ;
++-----------+-----------------------+-------+-------+------------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                           ;
++-----------------------+-----------------------+----------+----------+----------+----------+
+; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------+-----------------------+----------+----------+----------+----------+
+; clk                   ; clk                   ; 0        ; 0        ; 0        ; 9        ;
+; numinvers10:inst|inst ; clk                   ; 0        ; 0        ; 4        ; 4        ;
+; IncrementareSecunde   ; IncrementareSecunde   ; 0        ; 0        ; 0        ; 7        ;
+; numinvers10:inst|inst ; numinvers10:inst|inst ; 13       ; 0        ; 0        ; 0        ;
++-----------------------+-----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                            ;
++-----------------------+-----------------------+----------+----------+----------+----------+
+; From Clock            ; To Clock              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------+-----------------------+----------+----------+----------+----------+
+; clk                   ; clk                   ; 0        ; 0        ; 0        ; 9        ;
+; numinvers10:inst|inst ; clk                   ; 0        ; 0        ; 4        ; 4        ;
+; IncrementareSecunde   ; IncrementareSecunde   ; 0        ; 0        ; 0        ; 7        ;
+; numinvers10:inst|inst ; numinvers10:inst|inst ; 13       ; 0        ; 0        ; 0        ;
++-----------------------+-----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 17    ; 17   ;
+; Unconstrained Output Ports      ; 11    ; 11   ;
+; Unconstrained Output Port Paths ; 11    ; 11   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Feb 16 00:11:33 2023
+Info: Command: quartus_sta numaratorinvers -c numaratorinvers
+Info: qsta_default_script.tcl version: #1
+Critical Warning: Synopsys Design Constraints File file not found: 'numaratorinvers.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name clk clk
+    Info: create_clock -period 1.000 -name numinvers10:inst|inst numinvers10:inst|inst
+    Info: create_clock -period 1.000 -name IncrementareSecunde IncrementareSecunde
+Info: The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info: Cell: inst13|inst5  from: datae  to: combout
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.444
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.444        -1.000 numinvers10:inst|inst 
+    Info:    -0.340        -0.768 clk 
+    Info:    -0.252        -0.496 IncrementareSecunde 
+Info: Worst-case hold slack is -0.015
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.015        -0.040 clk 
+    Info:     0.490         0.000 IncrementareSecunde 
+    Info:     0.490         0.000 numinvers10:inst|inst 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.675
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.675        -4.691 clk 
+    Info:    -1.675        -3.937 IncrementareSecunde 
+    Info:    -0.377        -3.016 numinvers10:inst|inst 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info: Started post-fitting delay annotation
+Warning: Found 11 output pins without output pin load capacitance assignment
+    Info: Pin "ds1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ds0" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ds3" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ds2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "s1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "s2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "s0" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "s3" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "zs2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "zs1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "zs0" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Info: The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info: Cell: inst13|inst5  from: datae  to: combout
+Info: Worst-case setup slack is 0.471
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.471         0.000 numinvers10:inst|inst 
+    Info:     0.496         0.000 clk 
+    Info:     0.527         0.000 IncrementareSecunde 
+Critical Warning: Timing requirements not met
+Info: Worst-case hold slack is -0.158
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.158        -0.590 clk 
+    Info:     0.224         0.000 IncrementareSecunde 
+    Info:     0.224         0.000 numinvers10:inst|inst 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.000        -2.040 clk 
+    Info:    -1.000        -1.780 IncrementareSecunde 
+    Info:    -0.130        -1.040 numinvers10:inst|inst 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 261 megabytes
+    Info: Processing ended: Thu Feb 16 00:11:35 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,197 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'div10:inst10|inst3'
+Slack : -0.622
+TNS   : -1.196
+
+Type  : Slow Model Setup 'div10:inst13|inst3'
+Slack : -0.613
+TNS   : -0.854
+
+Type  : Slow Model Setup 'div10:inst11|inst3'
+Slack : -0.607
+TNS   : -1.084
+
+Type  : Slow Model Setup 'divizor11:inst3|inst2'
+Slack : -0.598
+TNS   : -0.895
+
+Type  : Slow Model Setup 'numarator3:inst8|inst1'
+Slack : -0.409
+TNS   : -0.497
+
+Type  : Slow Model Setup 'numarator7:inst1|inst2'
+Slack : -0.393
+TNS   : -1.578
+
+Type  : Slow Model Setup 'div10:inst12|inst3'
+Slack : -0.241
+TNS   : -0.944
+
+Type  : Slow Model Setup 'pin_name1'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Slow Model Hold 'div10:inst11|inst3'
+Slack : -0.103
+TNS   : -0.103
+
+Type  : Slow Model Hold 'numarator7:inst1|inst2'
+Slack : -0.080
+TNS   : -0.153
+
+Type  : Slow Model Hold 'div10:inst13|inst3'
+Slack : 0.025
+TNS   : 0.000
+
+Type  : Slow Model Hold 'numarator3:inst8|inst1'
+Slack : 0.122
+TNS   : 0.000
+
+Type  : Slow Model Hold 'divizor11:inst3|inst2'
+Slack : 0.220
+TNS   : 0.000
+
+Type  : Slow Model Hold 'div10:inst10|inst3'
+Slack : 0.480
+TNS   : 0.000
+
+Type  : Slow Model Hold 'div10:inst12|inst3'
+Slack : 0.490
+TNS   : 0.000
+
+Type  : Slow Model Hold 'pin_name1'
+Slack : 0.490
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'pin_name1'
+Slack : -1.675
+TNS   : -3.183
+
+Type  : Slow Model Minimum Pulse Width 'div10:inst12|inst3'
+Slack : -0.377
+TNS   : -4.524
+
+Type  : Slow Model Minimum Pulse Width 'numarator7:inst1|inst2'
+Slack : -0.377
+TNS   : -4.524
+
+Type  : Slow Model Minimum Pulse Width 'div10:inst10|inst3'
+Slack : -0.377
+TNS   : -3.770
+
+Type  : Slow Model Minimum Pulse Width 'div10:inst11|inst3'
+Slack : -0.377
+TNS   : -3.770
+
+Type  : Slow Model Minimum Pulse Width 'div10:inst13|inst3'
+Slack : -0.377
+TNS   : -3.770
+
+Type  : Slow Model Minimum Pulse Width 'divizor11:inst3|inst2'
+Slack : -0.377
+TNS   : -3.016
+
+Type  : Slow Model Minimum Pulse Width 'numarator3:inst8|inst1'
+Slack : -0.377
+TNS   : -2.262
+
+Type  : Fast Model Setup 'div10:inst10|inst3'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Fast Model Setup 'divizor11:inst3|inst2'
+Slack : 0.394
+TNS   : 0.000
+
+Type  : Fast Model Setup 'div10:inst13|inst3'
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Fast Model Setup 'div10:inst11|inst3'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Fast Model Setup 'numarator3:inst8|inst1'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Fast Model Setup 'numarator7:inst1|inst2'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Fast Model Setup 'div10:inst12|inst3'
+Slack : 0.528
+TNS   : 0.000
+
+Type  : Fast Model Setup 'pin_name1'
+Slack : 0.654
+TNS   : 0.000
+
+Type  : Fast Model Hold 'numarator7:inst1|inst2'
+Slack : -0.381
+TNS   : -0.672
+
+Type  : Fast Model Hold 'div10:inst11|inst3'
+Slack : -0.323
+TNS   : -0.619
+
+Type  : Fast Model Hold 'div10:inst13|inst3'
+Slack : -0.285
+TNS   : -0.566
+
+Type  : Fast Model Hold 'divizor11:inst3|inst2'
+Slack : -0.245
+TNS   : -0.445
+
+Type  : Fast Model Hold 'numarator3:inst8|inst1'
+Slack : -0.239
+TNS   : -0.648
+
+Type  : Fast Model Hold 'div10:inst10|inst3'
+Slack : -0.132
+TNS   : -0.260
+
+Type  : Fast Model Hold 'pin_name1'
+Slack : 0.217
+TNS   : 0.000
+
+Type  : Fast Model Hold 'div10:inst12|inst3'
+Slack : 0.218
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'pin_name1'
+Slack : -1.000
+TNS   : -1.520
+
+Type  : Fast Model Minimum Pulse Width 'div10:inst12|inst3'
+Slack : -0.130
+TNS   : -1.560
+
+Type  : Fast Model Minimum Pulse Width 'numarator7:inst1|inst2'
+Slack : -0.130
+TNS   : -1.560
+
+Type  : Fast Model Minimum Pulse Width 'div10:inst10|inst3'
+Slack : -0.130
+TNS   : -1.300
+
+Type  : Fast Model Minimum Pulse Width 'div10:inst11|inst3'
+Slack : -0.130
+TNS   : -1.300
+
+Type  : Fast Model Minimum Pulse Width 'div10:inst13|inst3'
+Slack : -0.130
+TNS   : -1.300
+
+Type  : Fast Model Minimum Pulse Width 'divizor11:inst3|inst2'
+Slack : -0.130
+TNS   : -1.040
+
+Type  : Fast Model Minimum Pulse Width 'numarator3:inst8|inst1'
+Slack : -0.130
+TNS   : -0.780
+
+------------------------------------------------------------

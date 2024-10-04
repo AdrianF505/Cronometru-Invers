@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pin_name19",
+					"strict" : false
+				},
+				{
+					"name" : "s0",
+					"strict" : false
+				},
+				{
+					"name" : "s1",
+					"strict" : false
+				},
+				{
+					"name" : "s2",
+					"strict" : false
+				},
+				{
+					"name" : "s3",
+					"strict" : false
+				},
+				{
+					"name" : "ds1",
+					"strict" : false
+				},
+				{
+					"name" : "ds0",
+					"strict" : false
+				},
+				{
+					"name" : "ds3",
+					"strict" : false
+				},
+				{
+					"name" : "ds2",
+					"strict" : false
+				},
+				{
+					"name" : "zs2",
+					"strict" : false
+				},
+				{
+					"name" : "zs1",
+					"strict" : false
+				},
+				{
+					"name" : "zs0",
+					"strict" : false
+				},
+				{
+					"name" : "m1",
+					"strict" : false
+				},
+				{
+					"name" : "m2",
+					"strict" : false
+				},
+				{
+					"name" : "m0",
+					"strict" : false
+				},
+				{
+					"name" : "m3",
+					"strict" : false
+				},
+				{
+					"name" : "zm1",
+					"strict" : false
+				},
+				{
+					"name" : "zm2",
+					"strict" : false
+				},
+				{
+					"name" : "zm0",
+					"strict" : false
+				},
+				{
+					"name" : "set",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,483 @@
+TimeQuest Timing Analyzer report for numfinal
+Wed Feb 15 23:56:10 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Clock to Output Times
+ 12. Minimum Clock to Output Times
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Multicorner Timing Analysis Summary
+ 21. Clock to Output Times
+ 22. Minimum Clock to Output Times
+ 23. Setup Transfers
+ 24. Hold Transfers
+ 25. Report TCCS
+ 26. Report RSKM
+ 27. Unconstrained Paths
+ 28. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                   ;
++--------------------+----------------------------------------------------------------+
+; Quartus II Version ; Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition ;
+; Revision Name      ; numfinal                                                       ;
+; Device Family      ; Arria GX                                                       ;
+; Device Name        ; EP1AGX20CF484C6                                                ;
+; Timing Models      ; Final                                                          ;
+; Delay Model        ; Combined                                                       ;
+; Rise/Fall Delays   ; Unavailable                                                    ;
++--------------------+----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                     ;
++----------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------+
+; Clock Name                                   ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                          ;
++----------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------+
+; clk                                          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                          ;
+; numaratorinvers:inst1|numinvers10:inst1|inst ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { numaratorinvers:inst1|numinvers10:inst1|inst } ;
+; numaratorinvers:inst1|numinvers10:inst|inst  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { numaratorinvers:inst1|numinvers10:inst|inst }  ;
++----------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                                                     ;
++------------+-----------------+----------------------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                                   ; Note                                                          ;
++------------+-----------------+----------------------------------------------+---------------------------------------------------------------+
+; 757.0 MHz  ; 373.83 MHz      ; clk                                          ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 792.39 MHz ; 570.13 MHz      ; numaratorinvers:inst1|numinvers10:inst|inst  ; limit due to high minimum pulse width violation (tch)         ;
+; 798.72 MHz ; 570.13 MHz      ; numaratorinvers:inst1|numinvers10:inst1|inst ; limit due to high minimum pulse width violation (tch)         ;
++------------+-----------------+----------------------------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------------------------+
+; Slow Model Setup Summary                                              ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; clk                                          ; -0.321 ; -0.827        ;
+; numaratorinvers:inst1|numinvers10:inst|inst  ; -0.262 ; -0.657        ;
+; numaratorinvers:inst1|numinvers10:inst1|inst ; -0.252 ; -0.496        ;
++----------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Slow Model Hold Summary                                               ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; numaratorinvers:inst1|numinvers10:inst|inst  ; -0.278 ; -1.006        ;
+; clk                                          ; 0.100  ; 0.000         ;
+; numaratorinvers:inst1|numinvers10:inst1|inst ; 0.490  ; 0.000         ;
++----------------------------------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                                ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; clk                                          ; -1.675 ; -4.691        ;
+; numaratorinvers:inst1|numinvers10:inst|inst  ; -0.377 ; -3.016        ;
+; numaratorinvers:inst1|numinvers10:inst1|inst ; -0.377 ; -2.262        ;
++----------------------------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                                  ;
++-----------+----------------------------------------------+--------+--------+------------+----------------------------------------------+
+; Data Port ; Clock Port                                   ; Rise   ; Fall   ; Clock Edge ; Clock Reference                              ;
++-----------+----------------------------------------------+--------+--------+------------+----------------------------------------------+
+; ds1       ; clk                                          ; 10.152 ; 10.152 ; Fall       ; clk                                          ;
+; ds2       ; clk                                          ; 8.864  ; 8.864  ; Fall       ; clk                                          ;
+; ds3       ; clk                                          ; 9.629  ; 9.629  ; Fall       ; clk                                          ;
+; s0        ; numaratorinvers:inst1|numinvers10:inst1|inst ; 5.986  ;        ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs0       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 9.669  ; 9.669  ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs1       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 9.362  ; 9.362  ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs2       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 9.069  ; 9.069  ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; s0        ; numaratorinvers:inst1|numinvers10:inst1|inst ;        ; 5.986  ; Fall       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; ds0       ; numaratorinvers:inst1|numinvers10:inst|inst  ; 6.930  ;        ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s1        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 9.034  ; 9.034  ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s2        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 8.979  ; 8.979  ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s3        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 8.081  ; 8.081  ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; ds0       ; numaratorinvers:inst1|numinvers10:inst|inst  ;        ; 6.930  ; Fall       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
++-----------+----------------------------------------------+--------+--------+------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                          ;
++-----------+----------------------------------------------+--------+--------+------------+----------------------------------------------+
+; Data Port ; Clock Port                                   ; Rise   ; Fall   ; Clock Edge ; Clock Reference                              ;
++-----------+----------------------------------------------+--------+--------+------------+----------------------------------------------+
+; ds1       ; clk                                          ; 10.152 ; 10.152 ; Fall       ; clk                                          ;
+; ds2       ; clk                                          ; 8.864  ; 8.864  ; Fall       ; clk                                          ;
+; ds3       ; clk                                          ; 9.629  ; 9.629  ; Fall       ; clk                                          ;
+; s0        ; numaratorinvers:inst1|numinvers10:inst1|inst ; 5.986  ;        ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs0       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 9.669  ; 9.669  ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs1       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 9.362  ; 9.362  ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs2       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 9.069  ; 9.069  ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; s0        ; numaratorinvers:inst1|numinvers10:inst1|inst ;        ; 5.986  ; Fall       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; ds0       ; numaratorinvers:inst1|numinvers10:inst|inst  ; 6.930  ;        ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s1        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 9.034  ; 9.034  ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s2        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 8.979  ; 8.979  ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s3        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 8.081  ; 8.081  ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; ds0       ; numaratorinvers:inst1|numinvers10:inst|inst  ;        ; 6.930  ; Fall       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
++-----------+----------------------------------------------+--------+--------+------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Fast Model Setup Summary                                             ;
++----------------------------------------------+-------+---------------+
+; Clock                                        ; Slack ; End Point TNS ;
++----------------------------------------------+-------+---------------+
+; clk                                          ; 0.457 ; 0.000         ;
+; numaratorinvers:inst1|numinvers10:inst|inst  ; 0.505 ; 0.000         ;
+; numaratorinvers:inst1|numinvers10:inst1|inst ; 0.527 ; 0.000         ;
++----------------------------------------------+-------+---------------+
+
+
++-----------------------------------------------------------------------+
+; Fast Model Hold Summary                                               ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; numaratorinvers:inst1|numinvers10:inst|inst  ; -0.183 ; -0.662        ;
+; clk                                          ; -0.164 ; -0.487        ;
+; numaratorinvers:inst1|numinvers10:inst1|inst ; 0.224  ; 0.000         ;
++----------------------------------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                                ;
++----------------------------------------------+--------+---------------+
+; Clock                                        ; Slack  ; End Point TNS ;
++----------------------------------------------+--------+---------------+
+; clk                                          ; -1.000 ; -2.040        ;
+; numaratorinvers:inst1|numinvers10:inst|inst  ; -0.130 ; -1.040        ;
+; numaratorinvers:inst1|numinvers10:inst1|inst ; -0.130 ; -0.780        ;
++----------------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                                ;
++-----------+----------------------------------------------+-------+-------+------------+----------------------------------------------+
+; Data Port ; Clock Port                                   ; Rise  ; Fall  ; Clock Edge ; Clock Reference                              ;
++-----------+----------------------------------------------+-------+-------+------------+----------------------------------------------+
+; ds1       ; clk                                          ; 4.144 ; 4.144 ; Fall       ; clk                                          ;
+; ds2       ; clk                                          ; 3.835 ; 3.835 ; Fall       ; clk                                          ;
+; ds3       ; clk                                          ; 3.992 ; 3.992 ; Fall       ; clk                                          ;
+; s0        ; numaratorinvers:inst1|numinvers10:inst1|inst ; 2.365 ;       ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs0       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 3.999 ; 3.999 ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs1       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 3.923 ; 3.923 ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs2       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 3.848 ; 3.848 ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; s0        ; numaratorinvers:inst1|numinvers10:inst1|inst ;       ; 2.365 ; Fall       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; ds0       ; numaratorinvers:inst1|numinvers10:inst|inst  ; 2.778 ;       ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s1        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 3.634 ; 3.634 ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s2        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 3.610 ; 3.610 ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s3        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 3.354 ; 3.354 ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; ds0       ; numaratorinvers:inst1|numinvers10:inst|inst  ;       ; 2.778 ; Fall       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
++-----------+----------------------------------------------+-------+-------+------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                        ;
++-----------+----------------------------------------------+-------+-------+------------+----------------------------------------------+
+; Data Port ; Clock Port                                   ; Rise  ; Fall  ; Clock Edge ; Clock Reference                              ;
++-----------+----------------------------------------------+-------+-------+------------+----------------------------------------------+
+; ds1       ; clk                                          ; 4.144 ; 4.144 ; Fall       ; clk                                          ;
+; ds2       ; clk                                          ; 3.835 ; 3.835 ; Fall       ; clk                                          ;
+; ds3       ; clk                                          ; 3.992 ; 3.992 ; Fall       ; clk                                          ;
+; s0        ; numaratorinvers:inst1|numinvers10:inst1|inst ; 2.365 ;       ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs0       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 3.999 ; 3.999 ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs1       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 3.923 ; 3.923 ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs2       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 3.848 ; 3.848 ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; s0        ; numaratorinvers:inst1|numinvers10:inst1|inst ;       ; 2.365 ; Fall       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; ds0       ; numaratorinvers:inst1|numinvers10:inst|inst  ; 2.778 ;       ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s1        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 3.634 ; 3.634 ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s2        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 3.610 ; 3.610 ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s3        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 3.354 ; 3.354 ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; ds0       ; numaratorinvers:inst1|numinvers10:inst|inst  ;       ; 2.778 ; Fall       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
++-----------+----------------------------------------------+-------+-------+------------+----------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                        ;
++-----------------------------------------------+--------+--------+----------+---------+---------------------+
+; Clock                                         ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack                              ; -0.321 ; -0.278 ; N/A      ; N/A     ; -1.675              ;
+;  clk                                          ; -0.321 ; -0.164 ; N/A      ; N/A     ; -1.675              ;
+;  numaratorinvers:inst1|numinvers10:inst1|inst ; -0.252 ; 0.224  ; N/A      ; N/A     ; -0.377              ;
+;  numaratorinvers:inst1|numinvers10:inst|inst  ; -0.262 ; -0.278 ; N/A      ; N/A     ; -0.377              ;
+; Design-wide TNS                               ; -1.98  ; -1.149 ; 0.0      ; 0.0     ; -9.969              ;
+;  clk                                          ; -0.827 ; -0.487 ; N/A      ; N/A     ; -4.691              ;
+;  numaratorinvers:inst1|numinvers10:inst1|inst ; -0.496 ; 0.000  ; N/A      ; N/A     ; -2.262              ;
+;  numaratorinvers:inst1|numinvers10:inst|inst  ; -0.657 ; -1.006 ; N/A      ; N/A     ; -3.016              ;
++-----------------------------------------------+--------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                                  ;
++-----------+----------------------------------------------+--------+--------+------------+----------------------------------------------+
+; Data Port ; Clock Port                                   ; Rise   ; Fall   ; Clock Edge ; Clock Reference                              ;
++-----------+----------------------------------------------+--------+--------+------------+----------------------------------------------+
+; ds1       ; clk                                          ; 10.152 ; 10.152 ; Fall       ; clk                                          ;
+; ds2       ; clk                                          ; 8.864  ; 8.864  ; Fall       ; clk                                          ;
+; ds3       ; clk                                          ; 9.629  ; 9.629  ; Fall       ; clk                                          ;
+; s0        ; numaratorinvers:inst1|numinvers10:inst1|inst ; 5.986  ;        ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs0       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 9.669  ; 9.669  ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs1       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 9.362  ; 9.362  ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs2       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 9.069  ; 9.069  ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; s0        ; numaratorinvers:inst1|numinvers10:inst1|inst ;        ; 5.986  ; Fall       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; ds0       ; numaratorinvers:inst1|numinvers10:inst|inst  ; 6.930  ;        ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s1        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 9.034  ; 9.034  ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s2        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 8.979  ; 8.979  ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s3        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 8.081  ; 8.081  ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; ds0       ; numaratorinvers:inst1|numinvers10:inst|inst  ;        ; 6.930  ; Fall       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
++-----------+----------------------------------------------+--------+--------+------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                        ;
++-----------+----------------------------------------------+-------+-------+------------+----------------------------------------------+
+; Data Port ; Clock Port                                   ; Rise  ; Fall  ; Clock Edge ; Clock Reference                              ;
++-----------+----------------------------------------------+-------+-------+------------+----------------------------------------------+
+; ds1       ; clk                                          ; 4.144 ; 4.144 ; Fall       ; clk                                          ;
+; ds2       ; clk                                          ; 3.835 ; 3.835 ; Fall       ; clk                                          ;
+; ds3       ; clk                                          ; 3.992 ; 3.992 ; Fall       ; clk                                          ;
+; s0        ; numaratorinvers:inst1|numinvers10:inst1|inst ; 2.365 ;       ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs0       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 3.999 ; 3.999 ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs1       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 3.923 ; 3.923 ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; zs2       ; numaratorinvers:inst1|numinvers10:inst1|inst ; 3.848 ; 3.848 ; Rise       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; s0        ; numaratorinvers:inst1|numinvers10:inst1|inst ;       ; 2.365 ; Fall       ; numaratorinvers:inst1|numinvers10:inst1|inst ;
+; ds0       ; numaratorinvers:inst1|numinvers10:inst|inst  ; 2.778 ;       ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s1        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 3.634 ; 3.634 ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s2        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 3.610 ; 3.610 ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; s3        ; numaratorinvers:inst1|numinvers10:inst|inst  ; 3.354 ; 3.354 ; Rise       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
+; ds0       ; numaratorinvers:inst1|numinvers10:inst|inst  ;       ; 2.778 ; Fall       ; numaratorinvers:inst1|numinvers10:inst|inst  ;
++-----------+----------------------------------------------+-------+-------+------------+----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                         ;
++----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
+; From Clock                                   ; To Clock                                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
+; clk                                          ; clk                                          ; 0        ; 0        ; 0        ; 9        ;
+; numaratorinvers:inst1|numinvers10:inst|inst  ; clk                                          ; 0        ; 0        ; 4        ; 4        ;
+; numaratorinvers:inst1|numinvers10:inst1|inst ; numaratorinvers:inst1|numinvers10:inst1|inst ; 7        ; 0        ; 0        ; 0        ;
+; numaratorinvers:inst1|numinvers10:inst1|inst ; numaratorinvers:inst1|numinvers10:inst|inst  ; 4        ; 4        ; 0        ; 0        ;
+; numaratorinvers:inst1|numinvers10:inst|inst  ; numaratorinvers:inst1|numinvers10:inst|inst  ; 9        ; 0        ; 0        ; 0        ;
++----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                          ;
++----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
+; From Clock                                   ; To Clock                                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
+; clk                                          ; clk                                          ; 0        ; 0        ; 0        ; 9        ;
+; numaratorinvers:inst1|numinvers10:inst|inst  ; clk                                          ; 0        ; 0        ; 4        ; 4        ;
+; numaratorinvers:inst1|numinvers10:inst1|inst ; numaratorinvers:inst1|numinvers10:inst1|inst ; 7        ; 0        ; 0        ; 0        ;
+; numaratorinvers:inst1|numinvers10:inst1|inst ; numaratorinvers:inst1|numinvers10:inst|inst  ; 4        ; 4        ; 0        ; 0        ;
+; numaratorinvers:inst1|numinvers10:inst|inst  ; numaratorinvers:inst1|numinvers10:inst|inst  ; 9        ; 0        ; 0        ; 0        ;
++----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 21    ; 21   ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 16    ; 16   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Feb 15 23:56:09 2023
+Info: Command: quartus_sta numfinal -c numfinal
+Info: qsta_default_script.tcl version: #1
+Critical Warning: Synopsys Design Constraints File file not found: 'numfinal.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name numaratorinvers:inst1|numinvers10:inst|inst numaratorinvers:inst1|numinvers10:inst|inst
+    Info: create_clock -period 1.000 -name clk clk
+    Info: create_clock -period 1.000 -name numaratorinvers:inst1|numinvers10:inst1|inst numaratorinvers:inst1|numinvers10:inst1|inst
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.321
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.321        -0.827 clk 
+    Info:    -0.262        -0.657 numaratorinvers:inst1|numinvers10:inst|inst 
+    Info:    -0.252        -0.496 numaratorinvers:inst1|numinvers10:inst1|inst 
+Info: Worst-case hold slack is -0.278
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.278        -1.006 numaratorinvers:inst1|numinvers10:inst|inst 
+    Info:     0.100         0.000 clk 
+    Info:     0.490         0.000 numaratorinvers:inst1|numinvers10:inst1|inst 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.675
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.675        -4.691 clk 
+    Info:    -0.377        -3.016 numaratorinvers:inst1|numinvers10:inst|inst 
+    Info:    -0.377        -2.262 numaratorinvers:inst1|numinvers10:inst1|inst 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info: Started post-fitting delay annotation
+Warning: Found 19 output pins without output pin load capacitance assignment
+    Info: Pin "pin_name19" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "s0" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "s1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "s2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "s3" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ds1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ds0" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ds3" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ds2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "zs2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "zs1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "zs0" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "m1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "m2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "m0" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "m3" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "zm1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "zm2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "zm0" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Info: Worst-case setup slack is 0.457
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.457         0.000 clk 
+    Info:     0.505         0.000 numaratorinvers:inst1|numinvers10:inst|inst 
+    Info:     0.527         0.000 numaratorinvers:inst1|numinvers10:inst1|inst 
+Critical Warning: Timing requirements not met
+Info: Worst-case hold slack is -0.183
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.183        -0.662 numaratorinvers:inst1|numinvers10:inst|inst 
+    Info:    -0.164        -0.487 clk 
+    Info:     0.224         0.000 numaratorinvers:inst1|numinvers10:inst1|inst 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.000        -2.040 clk 
+    Info:    -0.130        -1.040 numaratorinvers:inst1|numinvers10:inst|inst 
+    Info:    -0.130        -0.780 numaratorinvers:inst1|numinvers10:inst1|inst 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 261 megabytes
+    Info: Processing ended: Wed Feb 15 23:56:10 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

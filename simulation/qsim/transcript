@@ -1,0 +1,50 @@
+# do CRONOMETRUINVERS.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:41:27 on Feb 16,2023
+# vcom -work work CRONOMETRUINVERS.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneive_atom_pack
+# -- Loading package cycloneive_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity CRONOMETRUINVERS
+# -- Compiling architecture structure of CRONOMETRUINVERS
+# End time: 11:41:27 on Feb 16,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:41:27 on Feb 16,2023
+# vcom -work work CRONOMETRUINVERSFINAL.vwf.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CRONOMETRUINVERS_vhd_vec_tst
+# -- Compiling architecture CRONOMETRUINVERS_arch of CRONOMETRUINVERS_vhd_vec_tst
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(67): near "/": (vcom-1576) expecting ':'.
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(118): Symbol "I1" has already been declared in this region.
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(151): (vcom-1136) Unknown identifier "Start".
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(151): (vcom-1136) Unknown identifier "Stop".
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(134): (vcom-1590) Bad expression in actual part of association element 'i1'.
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(151): (vcom-1590) Bad expression in actual part of association element '\Start/Stop\'.
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(134): (vcom-1454) Formal "I1" of mode OUT cannot be associated with an expression.
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(151): (vcom-1436) Actual expression (infix expression) of formal "\Start/Stop\" is not globally static.
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(164): (vcom-1136) Unknown identifier "Start".
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(164): (vcom-1136) Unknown identifier "Stop".
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(164): near "<=": (vcom-1576) expecting == or '+' or '-' or '&'.
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(166): (vcom-1136) Unknown identifier "Start".
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(166): (vcom-1136) Unknown identifier "Stop".
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(166): near "<=": (vcom-1576) expecting == or '+' or '-' or '&'.
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(168): (vcom-1136) Unknown identifier "Start".
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(168): (vcom-1136) Unknown identifier "Stop".
+# ** Error: CRONOMETRUINVERSFINAL.vwf.vht(168): near "<=": (vcom-1576) expecting == or '+' or '-' or '&'.
+# ** Note: CRONOMETRUINVERSFINAL.vwf.vht(242): VHDL Compiler exiting
+# End time: 11:41:27 on Feb 16,2023, Elapsed time: 0:00:00
+# Errors: 17, Warnings: 0
+# ** Error: e:/quartusspercabun/modelsim_ase/win32aloem/vcom failed.
+# Executing ONERROR command at macro ./CRONOMETRUINVERS.do line 4

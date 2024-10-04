@@ -1,0 +1,492 @@
+TimeQuest Timing Analyzer report for divizorfrecventa
+Wed Feb 15 20:28:31 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Clock to Output Times
+ 12. Minimum Clock to Output Times
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Clock to Output Times
+ 19. Minimum Clock to Output Times
+ 20. Multicorner Timing Analysis Summary
+ 21. Clock to Output Times
+ 22. Minimum Clock to Output Times
+ 23. Setup Transfers
+ 24. Hold Transfers
+ 25. Report TCCS
+ 26. Report RSKM
+ 27. Unconstrained Paths
+ 28. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                   ;
++--------------------+----------------------------------------------------------------+
+; Quartus II Version ; Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition ;
+; Revision Name      ; divizorfrecventa                                               ;
+; Device Family      ; Arria GX                                                       ;
+; Device Name        ; EP1AGX20CF484C6                                                ;
+; Timing Models      ; Final                                                          ;
+; Delay Model        ; Combined                                                       ;
+; Rise/Fall Delays   ; Unavailable                                                    ;
++--------------------+----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                         ;
++------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------+
+; Clock Name             ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                    ;
++------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------+
+; div10:inst10|inst3     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { div10:inst10|inst3 }     ;
+; div10:inst11|inst3     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { div10:inst11|inst3 }     ;
+; div10:inst12|inst3     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { div10:inst12|inst3 }     ;
+; div10:inst13|inst3     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { div10:inst13|inst3 }     ;
+; divizor11:inst3|inst2  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divizor11:inst3|inst2 }  ;
+; numarator3:inst8|inst1 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { numarator3:inst8|inst1 } ;
+; numarator7:inst1|inst2 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { numarator7:inst1|inst2 } ;
+; pin_name1              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { pin_name1 }              ;
++------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                               ;
++------------+-----------------+------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name             ; Note                                                          ;
++------------+-----------------+------------------------+---------------------------------------------------------------+
+; 616.52 MHz ; 570.13 MHz      ; div10:inst10|inst3     ; limit due to high minimum pulse width violation (tch)         ;
+; 619.96 MHz ; 570.13 MHz      ; div10:inst13|inst3     ; limit due to high minimum pulse width violation (tch)         ;
+; 622.28 MHz ; 570.13 MHz      ; div10:inst11|inst3     ; limit due to high minimum pulse width violation (tch)         ;
+; 625.78 MHz ; 570.13 MHz      ; divizor11:inst3|inst2  ; limit due to high minimum pulse width violation (tch)         ;
+; 709.72 MHz ; 570.13 MHz      ; numarator3:inst8|inst1 ; limit due to high minimum pulse width violation (tch)         ;
+; 717.88 MHz ; 570.13 MHz      ; numarator7:inst1|inst2 ; limit due to high minimum pulse width violation (tch)         ;
+; 805.8 MHz  ; 570.13 MHz      ; div10:inst12|inst3     ; limit due to high minimum pulse width violation (tch)         ;
+; 1165.5 MHz ; 373.83 MHz      ; pin_name1              ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------------+
+; Slow Model Setup Summary                        ;
++------------------------+--------+---------------+
+; Clock                  ; Slack  ; End Point TNS ;
++------------------------+--------+---------------+
+; div10:inst10|inst3     ; -0.622 ; -1.196        ;
+; div10:inst13|inst3     ; -0.613 ; -0.854        ;
+; div10:inst11|inst3     ; -0.607 ; -1.084        ;
+; divizor11:inst3|inst2  ; -0.598 ; -0.895        ;
+; numarator3:inst8|inst1 ; -0.409 ; -0.497        ;
+; numarator7:inst1|inst2 ; -0.393 ; -1.578        ;
+; div10:inst12|inst3     ; -0.241 ; -0.944        ;
+; pin_name1              ; 0.142  ; 0.000         ;
++------------------------+--------+---------------+
+
+
++-------------------------------------------------+
+; Slow Model Hold Summary                         ;
++------------------------+--------+---------------+
+; Clock                  ; Slack  ; End Point TNS ;
++------------------------+--------+---------------+
+; div10:inst11|inst3     ; -0.103 ; -0.103        ;
+; numarator7:inst1|inst2 ; -0.080 ; -0.153        ;
+; div10:inst13|inst3     ; 0.025  ; 0.000         ;
+; numarator3:inst8|inst1 ; 0.122  ; 0.000         ;
+; divizor11:inst3|inst2  ; 0.220  ; 0.000         ;
+; div10:inst10|inst3     ; 0.480  ; 0.000         ;
+; div10:inst12|inst3     ; 0.490  ; 0.000         ;
+; pin_name1              ; 0.490  ; 0.000         ;
++------------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary          ;
++------------------------+--------+---------------+
+; Clock                  ; Slack  ; End Point TNS ;
++------------------------+--------+---------------+
+; pin_name1              ; -1.675 ; -3.183        ;
+; div10:inst12|inst3     ; -0.377 ; -4.524        ;
+; numarator7:inst1|inst2 ; -0.377 ; -4.524        ;
+; div10:inst10|inst3     ; -0.377 ; -3.770        ;
+; div10:inst11|inst3     ; -0.377 ; -3.770        ;
+; div10:inst13|inst3     ; -0.377 ; -3.770        ;
+; divizor11:inst3|inst2  ; -0.377 ; -3.016        ;
+; numarator3:inst8|inst1 ; -0.377 ; -2.262        ;
++------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; pin_name  ; div10:inst12|inst3 ; 7.529 ; 7.529 ; Rise       ; div10:inst12|inst3 ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; pin_name  ; div10:inst12|inst3 ; 7.529 ; 7.529 ; Rise       ; div10:inst12|inst3 ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++------------------------------------------------+
+; Fast Model Setup Summary                       ;
++------------------------+-------+---------------+
+; Clock                  ; Slack ; End Point TNS ;
++------------------------+-------+---------------+
+; div10:inst10|inst3     ; 0.387 ; 0.000         ;
+; divizor11:inst3|inst2  ; 0.394 ; 0.000         ;
+; div10:inst13|inst3     ; 0.395 ; 0.000         ;
+; div10:inst11|inst3     ; 0.397 ; 0.000         ;
+; numarator3:inst8|inst1 ; 0.454 ; 0.000         ;
+; numarator7:inst1|inst2 ; 0.459 ; 0.000         ;
+; div10:inst12|inst3     ; 0.528 ; 0.000         ;
+; pin_name1              ; 0.654 ; 0.000         ;
++------------------------+-------+---------------+
+
+
++-------------------------------------------------+
+; Fast Model Hold Summary                         ;
++------------------------+--------+---------------+
+; Clock                  ; Slack  ; End Point TNS ;
++------------------------+--------+---------------+
+; numarator7:inst1|inst2 ; -0.381 ; -0.672        ;
+; div10:inst11|inst3     ; -0.323 ; -0.619        ;
+; div10:inst13|inst3     ; -0.285 ; -0.566        ;
+; divizor11:inst3|inst2  ; -0.245 ; -0.445        ;
+; numarator3:inst8|inst1 ; -0.239 ; -0.648        ;
+; div10:inst10|inst3     ; -0.132 ; -0.260        ;
+; pin_name1              ; 0.217  ; 0.000         ;
+; div10:inst12|inst3     ; 0.218  ; 0.000         ;
++------------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary          ;
++------------------------+--------+---------------+
+; Clock                  ; Slack  ; End Point TNS ;
++------------------------+--------+---------------+
+; pin_name1              ; -1.000 ; -1.520        ;
+; div10:inst12|inst3     ; -0.130 ; -1.560        ;
+; numarator7:inst1|inst2 ; -0.130 ; -1.560        ;
+; div10:inst10|inst3     ; -0.130 ; -1.300        ;
+; div10:inst11|inst3     ; -0.130 ; -1.300        ;
+; div10:inst13|inst3     ; -0.130 ; -1.300        ;
+; divizor11:inst3|inst2  ; -0.130 ; -1.040        ;
+; numarator3:inst8|inst1 ; -0.130 ; -0.780        ;
++------------------------+--------+---------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; pin_name  ; div10:inst12|inst3 ; 3.316 ; 3.316 ; Rise       ; div10:inst12|inst3 ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; pin_name  ; div10:inst12|inst3 ; 3.316 ; 3.316 ; Rise       ; div10:inst12|inst3 ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                  ;
++-------------------------+--------+--------+----------+---------+---------------------+
+; Clock                   ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------+--------+--------+----------+---------+---------------------+
+; Worst-case Slack        ; -0.622 ; -0.381 ; N/A      ; N/A     ; -1.675              ;
+;  div10:inst10|inst3     ; -0.622 ; -0.132 ; N/A      ; N/A     ; -0.377              ;
+;  div10:inst11|inst3     ; -0.607 ; -0.323 ; N/A      ; N/A     ; -0.377              ;
+;  div10:inst12|inst3     ; -0.241 ; 0.218  ; N/A      ; N/A     ; -0.377              ;
+;  div10:inst13|inst3     ; -0.613 ; -0.285 ; N/A      ; N/A     ; -0.377              ;
+;  divizor11:inst3|inst2  ; -0.598 ; -0.245 ; N/A      ; N/A     ; -0.377              ;
+;  numarator3:inst8|inst1 ; -0.409 ; -0.239 ; N/A      ; N/A     ; -0.377              ;
+;  numarator7:inst1|inst2 ; -0.393 ; -0.381 ; N/A      ; N/A     ; -0.377              ;
+;  pin_name1              ; 0.142  ; 0.217  ; N/A      ; N/A     ; -1.675              ;
+; Design-wide TNS         ; -7.048 ; -3.21  ; 0.0      ; 0.0     ; -28.819             ;
+;  div10:inst10|inst3     ; -1.196 ; -0.260 ; N/A      ; N/A     ; -3.770              ;
+;  div10:inst11|inst3     ; -1.084 ; -0.619 ; N/A      ; N/A     ; -3.770              ;
+;  div10:inst12|inst3     ; -0.944 ; 0.000  ; N/A      ; N/A     ; -4.524              ;
+;  div10:inst13|inst3     ; -0.854 ; -0.566 ; N/A      ; N/A     ; -3.770              ;
+;  divizor11:inst3|inst2  ; -0.895 ; -0.445 ; N/A      ; N/A     ; -3.016              ;
+;  numarator3:inst8|inst1 ; -0.497 ; -0.648 ; N/A      ; N/A     ; -2.262              ;
+;  numarator7:inst1|inst2 ; -1.578 ; -0.672 ; N/A      ; N/A     ; -4.524              ;
+;  pin_name1              ; 0.000  ; 0.000  ; N/A      ; N/A     ; -3.183              ;
++-------------------------+--------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------+
+; Clock to Output Times                                                            ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; pin_name  ; div10:inst12|inst3 ; 7.529 ; 7.529 ; Rise       ; div10:inst12|inst3 ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++----------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; Data Port ; Clock Port         ; Rise  ; Fall  ; Clock Edge ; Clock Reference    ;
++-----------+--------------------+-------+-------+------------+--------------------+
+; pin_name  ; div10:inst12|inst3 ; 3.316 ; 3.316 ; Rise       ; div10:inst12|inst3 ;
++-----------+--------------------+-------+-------+------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                             ;
++------------------------+------------------------+----------+----------+----------+----------+
+; From Clock             ; To Clock               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------+------------------------+----------+----------+----------+----------+
+; div10:inst10|inst3     ; div10:inst10|inst3     ; 10       ; 0        ; 0        ; 0        ;
+; div10:inst11|inst3     ; div10:inst10|inst3     ; 2        ; 2        ; 0        ; 0        ;
+; div10:inst11|inst3     ; div10:inst11|inst3     ; 10       ; 0        ; 0        ; 0        ;
+; div10:inst12|inst3     ; div10:inst11|inst3     ; 2        ; 2        ; 0        ; 0        ;
+; div10:inst12|inst3     ; div10:inst12|inst3     ; 15       ; 0        ; 0        ; 0        ;
+; div10:inst10|inst3     ; div10:inst13|inst3     ; 2        ; 2        ; 0        ; 0        ;
+; div10:inst13|inst3     ; div10:inst13|inst3     ; 10       ; 0        ; 0        ; 0        ;
+; div10:inst13|inst3     ; divizor11:inst3|inst2  ; 2        ; 2        ; 0        ; 0        ;
+; divizor11:inst3|inst2  ; divizor11:inst3|inst2  ; 9        ; 0        ; 0        ; 0        ;
+; numarator3:inst8|inst1 ; numarator3:inst8|inst1 ; 6        ; 0        ; 0        ; 0        ;
+; numarator7:inst1|inst2 ; numarator3:inst8|inst1 ; 3        ; 3        ; 0        ; 0        ;
+; divizor11:inst3|inst2  ; numarator7:inst1|inst2 ; 2        ; 2        ; 0        ; 0        ;
+; numarator7:inst1|inst2 ; numarator7:inst1|inst2 ; 17       ; 0        ; 0        ; 0        ;
+; pin_name1              ; pin_name1              ; 2        ; 0        ; 0        ; 0        ;
++------------------------+------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                              ;
++------------------------+------------------------+----------+----------+----------+----------+
+; From Clock             ; To Clock               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------+------------------------+----------+----------+----------+----------+
+; div10:inst10|inst3     ; div10:inst10|inst3     ; 10       ; 0        ; 0        ; 0        ;
+; div10:inst11|inst3     ; div10:inst10|inst3     ; 2        ; 2        ; 0        ; 0        ;
+; div10:inst11|inst3     ; div10:inst11|inst3     ; 10       ; 0        ; 0        ; 0        ;
+; div10:inst12|inst3     ; div10:inst11|inst3     ; 2        ; 2        ; 0        ; 0        ;
+; div10:inst12|inst3     ; div10:inst12|inst3     ; 15       ; 0        ; 0        ; 0        ;
+; div10:inst10|inst3     ; div10:inst13|inst3     ; 2        ; 2        ; 0        ; 0        ;
+; div10:inst13|inst3     ; div10:inst13|inst3     ; 10       ; 0        ; 0        ; 0        ;
+; div10:inst13|inst3     ; divizor11:inst3|inst2  ; 2        ; 2        ; 0        ; 0        ;
+; divizor11:inst3|inst2  ; divizor11:inst3|inst2  ; 9        ; 0        ; 0        ; 0        ;
+; numarator3:inst8|inst1 ; numarator3:inst8|inst1 ; 6        ; 0        ; 0        ; 0        ;
+; numarator7:inst1|inst2 ; numarator3:inst8|inst1 ; 3        ; 3        ; 0        ; 0        ;
+; divizor11:inst3|inst2  ; numarator7:inst1|inst2 ; 2        ; 2        ; 0        ; 0        ;
+; numarator7:inst1|inst2 ; numarator7:inst1|inst2 ; 17       ; 0        ; 0        ; 0        ;
+; pin_name1              ; pin_name1              ; 2        ; 0        ; 0        ; 0        ;
++------------------------+------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Feb 15 20:28:31 2023
+Info: Command: quartus_sta divizorfrecventa -c divizorfrecventa
+Info: qsta_default_script.tcl version: #1
+Critical Warning: Synopsys Design Constraints File file not found: 'divizorfrecventa.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name div10:inst12|inst3 div10:inst12|inst3
+    Info: create_clock -period 1.000 -name div10:inst11|inst3 div10:inst11|inst3
+    Info: create_clock -period 1.000 -name div10:inst10|inst3 div10:inst10|inst3
+    Info: create_clock -period 1.000 -name div10:inst13|inst3 div10:inst13|inst3
+    Info: create_clock -period 1.000 -name divizor11:inst3|inst2 divizor11:inst3|inst2
+    Info: create_clock -period 1.000 -name numarator7:inst1|inst2 numarator7:inst1|inst2
+    Info: create_clock -period 1.000 -name numarator3:inst8|inst1 numarator3:inst8|inst1
+    Info: create_clock -period 1.000 -name pin_name1 pin_name1
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.622
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.622        -1.196 div10:inst10|inst3 
+    Info:    -0.613        -0.854 div10:inst13|inst3 
+    Info:    -0.607        -1.084 div10:inst11|inst3 
+    Info:    -0.598        -0.895 divizor11:inst3|inst2 
+    Info:    -0.409        -0.497 numarator3:inst8|inst1 
+    Info:    -0.393        -1.578 numarator7:inst1|inst2 
+    Info:    -0.241        -0.944 div10:inst12|inst3 
+    Info:     0.142         0.000 pin_name1 
+Info: Worst-case hold slack is -0.103
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.103        -0.103 div10:inst11|inst3 
+    Info:    -0.080        -0.153 numarator7:inst1|inst2 
+    Info:     0.025         0.000 div10:inst13|inst3 
+    Info:     0.122         0.000 numarator3:inst8|inst1 
+    Info:     0.220         0.000 divizor11:inst3|inst2 
+    Info:     0.480         0.000 div10:inst10|inst3 
+    Info:     0.490         0.000 div10:inst12|inst3 
+    Info:     0.490         0.000 pin_name1 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.675
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.675        -3.183 pin_name1 
+    Info:    -0.377        -4.524 div10:inst12|inst3 
+    Info:    -0.377        -4.524 numarator7:inst1|inst2 
+    Info:    -0.377        -3.770 div10:inst10|inst3 
+    Info:    -0.377        -3.770 div10:inst11|inst3 
+    Info:    -0.377        -3.770 div10:inst13|inst3 
+    Info:    -0.377        -3.016 divizor11:inst3|inst2 
+    Info:    -0.377        -2.262 numarator3:inst8|inst1 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info: Worst-case setup slack is 0.387
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.387         0.000 div10:inst10|inst3 
+    Info:     0.394         0.000 divizor11:inst3|inst2 
+    Info:     0.395         0.000 div10:inst13|inst3 
+    Info:     0.397         0.000 div10:inst11|inst3 
+    Info:     0.454         0.000 numarator3:inst8|inst1 
+    Info:     0.459         0.000 numarator7:inst1|inst2 
+    Info:     0.528         0.000 div10:inst12|inst3 
+    Info:     0.654         0.000 pin_name1 
+Critical Warning: Timing requirements not met
+Info: Worst-case hold slack is -0.381
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.381        -0.672 numarator7:inst1|inst2 
+    Info:    -0.323        -0.619 div10:inst11|inst3 
+    Info:    -0.285        -0.566 div10:inst13|inst3 
+    Info:    -0.245        -0.445 divizor11:inst3|inst2 
+    Info:    -0.239        -0.648 numarator3:inst8|inst1 
+    Info:    -0.132        -0.260 div10:inst10|inst3 
+    Info:     0.217         0.000 pin_name1 
+    Info:     0.218         0.000 div10:inst12|inst3 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.000        -1.520 pin_name1 
+    Info:    -0.130        -1.560 div10:inst12|inst3 
+    Info:    -0.130        -1.560 numarator7:inst1|inst2 
+    Info:    -0.130        -1.300 div10:inst10|inst3 
+    Info:    -0.130        -1.300 div10:inst11|inst3 
+    Info:    -0.130        -1.300 div10:inst13|inst3 
+    Info:    -0.130        -1.040 divizor11:inst3|inst2 
+    Info:    -0.130        -0.780 numarator3:inst8|inst1 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 202 megabytes
+    Info: Processing ended: Wed Feb 15 20:28:31 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

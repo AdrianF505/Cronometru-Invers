@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, E:/inceput proiect/Numarator invers/Numarator 6/num6invers.bdf
+source_file = 1, E:/inceput proiect/Numarator invers/Numarator 6/db/num6invers.cbx.xml
+design_name = hard_block
+design_name = num6invers
+instance = comp, \q0~output\, q0~output, num6invers, 1
+instance = comp, \q1~output\, q1~output, num6invers, 1
+instance = comp, \q2~output\, q2~output, num6invers, 1
+instance = comp, \ck~input\, ck~input, num6invers, 1
+instance = comp, \ck~inputclkctrl\, ck~inputclkctrl, num6invers, 1
+instance = comp, \inst~0\, inst~0, num6invers, 1
+instance = comp, \reset~input\, reset~input, num6invers, 1
+instance = comp, \reset~inputclkctrl\, reset~inputclkctrl, num6invers, 1
+instance = comp, \inst2~0\, inst2~0, num6invers, 1
+instance = comp, \inst1~0\, inst1~0, num6invers, 1

@@ -1,0 +1,104 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+39
+3700
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+numaratorminute
+# storage
+db|numaratorminute.(0).cnf
+db|numaratorminute.(0).cnf
+# case_insensitive
+# source_file
+numaratorminute.bdf
+654682d2bdce33ca844ea6d08aeae8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+numinvers10
+# storage
+db|numaratorminute.(1).cnf
+db|numaratorminute.(1).cnf
+# case_insensitive
+# source_file
+|users|silvi|desktop|inceput proiect|numarator invers|numinvers10|numinvers10.bdf
+744d85da64b49543b5985d762befea
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+numinvers10:inst1
+}
+# macro_sequence
+
+# end
+# entity
+num6invers
+# storage
+db|numaratorminute.(2).cnf
+db|numaratorminute.(2).cnf
+# case_insensitive
+# source_file
+|users|silvi|desktop|inceput proiect|numarator invers|numarator 6|num6invers.bdf
+e7a1524d29631c6117afe58f9fade874
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+num6invers:inst
+}
+# macro_sequence
+
+# end
+# entity
+Mux21
+# storage
+db|numaratorminute.(3).cnf
+db|numaratorminute.(3).cnf
+# case_insensitive
+# source_file
+|users|silvi|desktop|proiect_circuitenumerice|mux21|mux21.bdf
+3387f28411a751b33319a736e6f62ee
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Mux21:inst2
+Mux21:inst3
+}
+# macro_sequence
+
+# end
+# complete
+

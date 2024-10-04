@@ -1,0 +1,104 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+39
+3700
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+numinvers10
+# storage
+db|numaratorinvers.(1).cnf
+db|numaratorinvers.(1).cnf
+# case_insensitive
+# source_file
+numinvers10|numinvers10.bdf
+744d85da64b49543b5985d762befea
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+numinvers10:inst
+numinvers10:inst1
+}
+# macro_sequence
+
+# end
+# entity
+num6invers
+# storage
+db|numaratorinvers.(2).cnf
+db|numaratorinvers.(2).cnf
+# case_insensitive
+# source_file
+numarator 6|num6invers.bdf
+e7a1524d29631c6117afe58f9fade874
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+num6invers:inst2
+}
+# macro_sequence
+
+# end
+# entity
+numaratorinvers
+# storage
+db|numaratorinvers.(0).cnf
+db|numaratorinvers.(0).cnf
+# case_insensitive
+# source_file
+numaratorinvers.bdf
+11f80d575c3d117766772da3a86e4e0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+Mux21
+# storage
+db|numaratorinvers.(3).cnf
+db|numaratorinvers.(3).cnf
+# case_insensitive
+# source_file
+|users|silvi|desktop|inceput proiect|mux21|mux21.bdf
+3387f28411a751b33319a736e6f62ee
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Mux21:inst13
+}
+# macro_sequence
+
+# end
+# complete
+

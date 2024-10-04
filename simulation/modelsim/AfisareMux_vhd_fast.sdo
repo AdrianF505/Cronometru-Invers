@@ -1,0 +1,892 @@
+// Copyright (C) 1991-2010 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+
+// 
+// Device: Altera EP1AGX20CF484C6 Package FBGA484
+// 
+
+// 
+// This SDF file should be used for ModelSim-Altera (VHDL) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "AfisareMux")
+  (DATE "02/16/2023 09:07:37")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus II")
+  (VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\SEC2\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (424:424:424) (424:424:424))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\Input\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (483:483:483) (483:483:483))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_clkctrl")
+    (INSTANCE \\Input\~clkctrl\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT inclk[0] (227:227:227) (227:227:227))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_ena_reg")
+    (INSTANCE \\Input\~clkctrl\\.extena0_reg)
+    (DELAY
+      (ABSOLUTE
+        (PORT d (0:0:0) (0:0:0))
+        (PORT clk (0:0:0) (0:0:0))
+        (IOPATH (posedge clk) q (49:49:49) (49:49:49))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP d (posedge clk) (15:15:15))
+      (HOLD d (posedge clk) (29:29:29))
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst39\|inst5\~6\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (193:193:193) (193:193:193))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datad combout (180:180:180) (180:180:180))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\RESET\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (483:483:483) (483:483:483))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_clkctrl")
+    (INSTANCE \\RESET\~clkctrl\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT inclk[0] (227:227:227) (227:227:227))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_ena_reg")
+    (INSTANCE \\RESET\~clkctrl\\.extena0_reg)
+    (DELAY
+      (ABSOLUTE
+        (PORT d (0:0:0) (0:0:0))
+        (PORT clk (0:0:0) (0:0:0))
+        (IOPATH (posedge clk) q (49:49:49) (49:49:49))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP d (posedge clk) (15:15:15))
+      (HOLD d (posedge clk) (29:29:29))
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_ff")
+    (INSTANCE \\inst4\|inst1\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (909:909:909) (909:909:909))
+        (PORT datain (97:97:97) (97:97:97))
+        (PORT aclr (758:758:758) (758:758:758))
+        (IOPATH (posedge clk) regout (62:62:62) (62:62:62))
+        (IOPATH (posedge aclr) regout (136:136:136) (136:136:136))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (47:47:47))
+      (HOLD datain (posedge clk) (75:75:75))
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst4\|inst\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (176:176:176) (176:176:176))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH datad combout (180:180:180) (180:180:180))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_ff")
+    (INSTANCE \\inst4\|inst\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (909:909:909) (909:909:909))
+        (PORT datain (97:97:97) (97:97:97))
+        (PORT aclr (758:758:758) (758:758:758))
+        (IOPATH (posedge clk) regout (62:62:62) (62:62:62))
+        (IOPATH (posedge aclr) regout (136:136:136) (136:136:136))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (47:47:47))
+      (HOLD datain (posedge clk) (75:75:75))
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst39\|inst5\~3\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (184:184:184) (184:184:184))
+        (PORT datad (148:148:148) (148:148:148))
+        (PORT dataf (124:124:124) (124:124:124))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH datad combout (110:110:110) (110:110:110))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_ff")
+    (INSTANCE \\inst4\|inst2\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (909:909:909) (909:909:909))
+        (PORT adatasdata (322:322:322) (322:322:322))
+        (PORT aclr (758:758:758) (758:758:758))
+        (IOPATH (posedge clk) regout (62:62:62) (62:62:62))
+        (IOPATH (posedge aclr) regout (136:136:136) (136:136:136))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP adatasdata (posedge clk) (47:47:47))
+      (HOLD adatasdata (posedge clk) (75:75:75))
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\ZM\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (460:460:460) (460:460:460))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\M\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (460:460:460) (460:460:460))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst1\|sub\|81\~1\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (2333:2333:2333) (2333:2333:2333))
+        (PORT datab (318:318:318) (318:318:318))
+        (PORT datac (2910:2910:2910) (2910:2910:2910))
+        (PORT datad (307:307:307) (307:307:307))
+        (PORT datae (150:150:150) (150:150:150))
+        (PORT dataf (2872:2872:2872) (2872:2872:2872))
+        (IOPATH dataa combout (170:170:170) (170:170:170))
+        (IOPATH datab combout (167:167:167) (167:167:167))
+        (IOPATH datac combout (120:120:120) (120:120:120))
+        (IOPATH datad combout (126:126:126) (126:126:126))
+        (IOPATH datae combout (77:77:77) (77:77:77))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\ZSEC2\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (444:444:444) (444:444:444))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\DS2\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (478:478:478) (478:478:478))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst1\|sub\|81\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (182:182:182) (182:182:182))
+        (PORT datab (178:178:178) (178:178:178))
+        (PORT datac (3006:3006:3006) (3006:3006:3006))
+        (PORT dataf (2486:2486:2486) (2486:2486:2486))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH datad combout (180:180:180) (180:180:180))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst1\|sub\|81\~2\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datad (618:618:618) (618:618:618))
+        (PORT dataf (608:608:608) (608:608:608))
+        (IOPATH datad combout (110:110:110) (110:110:110))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\DS1\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (460:460:460) (460:460:460))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\ZS1\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (444:444:444) (444:444:444))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst2\|sub\|81\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (182:182:182) (182:182:182))
+        (PORT datab (178:178:178) (178:178:178))
+        (PORT datac (2879:2879:2879) (2879:2879:2879))
+        (PORT datad (202:202:202) (202:202:202))
+        (PORT dataf (3005:3005:3005) (3005:3005:3005))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH datad combout (110:110:110) (110:110:110))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\ZM1\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (478:478:478) (478:478:478))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\S1\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (424:424:424) (424:424:424))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\M1\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (424:424:424) (424:424:424))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst2\|sub\|81\~1\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (239:239:239) (239:239:239))
+        (PORT datab (2760:2760:2760) (2760:2760:2760))
+        (PORT datac (2947:2947:2947) (2947:2947:2947))
+        (PORT datad (2890:2890:2890) (2890:2890:2890))
+        (PORT datae (159:159:159) (159:159:159))
+        (PORT dataf (355:355:355) (355:355:355))
+        (IOPATH dataa combout (170:170:170) (170:170:170))
+        (IOPATH datab combout (167:167:167) (167:167:167))
+        (IOPATH datac combout (120:120:120) (120:120:120))
+        (IOPATH datad combout (126:126:126) (126:126:126))
+        (IOPATH datae combout (77:77:77) (77:77:77))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst2\|sub\|81\~2\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (629:629:629) (629:629:629))
+        (PORT dataf (608:608:608) (608:608:608))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\M0\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (424:424:424) (424:424:424))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\S0\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (478:478:478) (478:478:478))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\ZM0\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (478:478:478) (478:478:478))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst3\|sub\|81\~1\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (235:235:235) (235:235:235))
+        (PORT datab (3200:3200:3200) (3200:3200:3200))
+        (PORT datac (3108:3108:3108) (3108:3108:3108))
+        (PORT datad (177:177:177) (177:177:177))
+        (PORT datae (3295:3295:3295) (3295:3295:3295))
+        (PORT dataf (358:358:358) (358:358:358))
+        (IOPATH dataa combout (170:170:170) (170:170:170))
+        (IOPATH datab combout (167:167:167) (167:167:167))
+        (IOPATH datac combout (120:120:120) (120:120:120))
+        (IOPATH datad combout (126:126:126) (126:126:126))
+        (IOPATH datae combout (77:77:77) (77:77:77))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst3\|sub\|81\~2\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (648:648:648) (648:648:648))
+        (PORT datad (611:611:611) (611:611:611))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datad combout (110:110:110) (110:110:110))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\M3\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (478:478:478) (478:478:478))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\ZM3\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (424:424:424) (424:424:424))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst5\|inst29\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (193:193:193) (193:193:193))
+        (PORT datab (168:168:168) (168:168:168))
+        (PORT datac (318:318:318) (318:318:318))
+        (PORT datad (3071:3071:3071) (3071:3071:3071))
+        (PORT dataf (2896:2896:2896) (2896:2896:2896))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH datad combout (110:110:110) (110:110:110))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\ZS3\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (444:444:444) (444:444:444))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\DS3\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (478:478:478) (478:478:478))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst\|sub\|81\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (193:193:193) (193:193:193))
+        (PORT datab (163:163:163) (163:163:163))
+        (PORT datac (3081:3081:3081) (3081:3081:3081))
+        (PORT datad (212:212:212) (212:212:212))
+        (PORT dataf (3097:3097:3097) (3097:3097:3097))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH datad combout (110:110:110) (110:110:110))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst39\|inst5\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (180:180:180) (180:180:180))
+        (PORT datac (170:170:170) (170:170:170))
+        (PORT dataf (120:120:120) (120:120:120))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\S3\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (478:478:478) (478:478:478))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst5\|inst29\~1\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (615:615:615) (615:615:615))
+        (PORT datac (613:613:613) (613:613:613))
+        (PORT datad (605:605:605) (605:605:605))
+        (PORT dataf (3054:3054:3054) (3054:3054:3054))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH datad combout (110:110:110) (110:110:110))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst5\|inst11\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (155:155:155) (155:155:155))
+        (PORT datab (153:153:153) (153:153:153))
+        (PORT datac (163:163:163) (163:163:163))
+        (PORT datad (132:132:132) (132:132:132))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH datad combout (110:110:110) (110:110:110))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\DS0\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (444:444:444) (444:444:444))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\ZS0\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (444:444:444) (444:444:444))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst3\|sub\|81\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (192:192:192) (192:192:192))
+        (PORT datab (171:171:171) (171:171:171))
+        (PORT datac (318:318:318) (318:318:318))
+        (PORT datad (3009:3009:3009) (3009:3009:3009))
+        (PORT dataf (3199:3199:3199) (3199:3199:3199))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH datad combout (110:110:110) (110:110:110))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst5\|inst16\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (642:642:642) (642:642:642))
+        (PORT datab (628:628:628) (628:628:628))
+        (PORT datac (640:640:640) (640:640:640))
+        (PORT datad (637:637:637) (637:637:637))
+        (PORT datae (612:612:612) (612:612:612))
+        (PORT dataf (615:615:615) (615:615:615))
+        (IOPATH dataa combout (170:170:170) (170:170:170))
+        (IOPATH datab combout (167:167:167) (167:167:167))
+        (IOPATH datac combout (120:120:120) (120:120:120))
+        (IOPATH datad combout (126:126:126) (126:126:126))
+        (IOPATH datae combout (77:77:77) (77:77:77))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst5\|inst17\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (645:645:645) (645:645:645))
+        (PORT datab (630:630:630) (630:630:630))
+        (PORT datac (640:640:640) (640:640:640))
+        (PORT datad (643:643:643) (643:643:643))
+        (PORT datae (604:604:604) (604:604:604))
+        (PORT dataf (617:617:617) (617:617:617))
+        (IOPATH dataa combout (170:170:170) (170:170:170))
+        (IOPATH datab combout (167:167:167) (167:167:167))
+        (IOPATH datac combout (120:120:120) (120:120:120))
+        (IOPATH datad combout (126:126:126) (126:126:126))
+        (IOPATH datae combout (77:77:77) (77:77:77))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst5\|inst21\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (161:161:161) (161:161:161))
+        (PORT datac (144:144:144) (144:144:144))
+        (PORT datad (150:150:150) (150:150:150))
+        (PORT dataf (135:135:135) (135:135:135))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH datad combout (110:110:110) (110:110:110))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst5\|inst22\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (644:644:644) (644:644:644))
+        (PORT datab (630:630:630) (630:630:630))
+        (PORT datac (641:641:641) (641:641:641))
+        (PORT datad (639:639:639) (639:639:639))
+        (PORT datae (606:606:606) (606:606:606))
+        (PORT dataf (617:617:617) (617:617:617))
+        (IOPATH dataa combout (170:170:170) (170:170:170))
+        (IOPATH datab combout (167:167:167) (167:167:167))
+        (IOPATH datac combout (120:120:120) (120:120:120))
+        (IOPATH datad combout (126:126:126) (126:126:126))
+        (IOPATH datae combout (77:77:77) (77:77:77))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst5\|inst29\~2\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (157:157:157) (157:157:157))
+        (PORT datab (153:153:153) (153:153:153))
+        (PORT datac (166:166:166) (166:166:166))
+        (PORT dataf (131:131:131) (131:131:131))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst5\|inst35\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (157:157:157) (157:157:157))
+        (PORT datab (153:153:153) (153:153:153))
+        (PORT datad (145:145:145) (145:145:145))
+        (PORT dataf (131:131:131) (131:131:131))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datad combout (110:110:110) (110:110:110))
+        (IOPATH dataf combout (18:18:18) (18:18:18))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst39\|inst5\~1\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (193:193:193) (193:193:193))
+        (PORT datab (168:168:168) (168:168:168))
+        (PORT datac (233:233:233) (233:233:233))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst39\|inst5\~2\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (296:296:296) (296:296:296))
+        (PORT datab (202:202:202) (202:202:202))
+        (PORT datad (188:188:188) (188:188:188))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datad combout (110:110:110) (110:110:110))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst39\|inst5\~4\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (296:296:296) (296:296:296))
+        (PORT datab (202:202:202) (202:202:202))
+        (PORT datac (208:208:208) (208:208:208))
+        (IOPATH dataa combout (161:161:161) (161:161:161))
+        (IOPATH datab combout (158:158:158) (158:158:158))
+        (IOPATH datac combout (94:94:94) (94:94:94))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_lcell_comb")
+    (INSTANCE \\inst39\|inst5\~5\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (205:205:205) (205:205:205))
+        (PORT datac (200:200:200) (200:200:200))
+        (PORT datae (187:187:187) (187:187:187))
+        (IOPATH datab combout (167:167:167) (167:167:167))
+        (IOPATH datac combout (120:120:120) (120:120:120))
+        (IOPATH datae combout (77:77:77) (77:77:77))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\a\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (384:384:384) (384:384:384))
+        (IOPATH datain padio (1075:1075:1075) (1075:1075:1075))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\b\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1701:1701:1701) (1701:1701:1701))
+        (IOPATH datain padio (1185:1185:1185) (1185:1185:1185))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\c\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (288:288:288) (288:288:288))
+        (IOPATH datain padio (1075:1075:1075) (1075:1075:1075))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\d\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (290:290:290) (290:290:290))
+        (IOPATH datain padio (1075:1075:1075) (1075:1075:1075))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\e\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (2713:2713:2713) (2713:2713:2713))
+        (IOPATH datain padio (1185:1185:1185) (1185:1185:1185))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\f\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (292:292:292) (292:292:292))
+        (IOPATH datain padio (1075:1075:1075) (1075:1075:1075))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\g\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1444:1444:1444) (1444:1444:1444))
+        (IOPATH datain padio (1185:1185:1185) (1185:1185:1185))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\i0\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (436:436:436) (436:436:436))
+        (IOPATH datain padio (1121:1121:1121) (1121:1121:1121))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\i1\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (550:550:550) (550:550:550))
+        (IOPATH datain padio (1075:1075:1075) (1075:1075:1075))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\i2\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (356:356:356) (356:356:356))
+        (IOPATH datain padio (1096:1096:1096) (1096:1096:1096))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\i3\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (446:446:446) (446:446:446))
+        (IOPATH datain padio (1096:1096:1096) (1096:1096:1096))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\i4\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1587:1587:1587) (1587:1587:1587))
+        (IOPATH datain padio (1075:1075:1075) (1075:1075:1075))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "arriagx_asynch_io")
+    (INSTANCE \\i5\~I\\.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1348:1348:1348) (1348:1348:1348))
+        (IOPATH datain padio (1185:1185:1185) (1185:1185:1185))
+      )
+    )
+  )
+)

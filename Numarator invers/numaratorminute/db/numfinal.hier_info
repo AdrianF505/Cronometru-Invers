@@ -1,0 +1,150 @@
+|numfinal
+pin_name19 <= numaratorminute:inst.iesire
+set => numaratorminute:inst.set
+set => numaratorinvers:inst1.set
+clk => numaratorinvers:inst1.clk
+reset => numaratorinvers:inst1.reset
+reset => numaratorminute:inst.reset
+s0 <= numaratorinvers:inst1.s0
+s1 <= numaratorinvers:inst1.s1
+s2 <= numaratorinvers:inst1.s2
+s3 <= numaratorinvers:inst1.s3
+ds1 <= numaratorinvers:inst1.ds1
+ds0 <= numaratorinvers:inst1.ds0
+ds3 <= numaratorinvers:inst1.ds3
+ds2 <= numaratorinvers:inst1.ds2
+zs2 <= numaratorinvers:inst1.zs2
+zs1 <= numaratorinvers:inst1.zs1
+zs0 <= numaratorinvers:inst1.zs0
+m1 <= numaratorminute:inst.m1
+m2 <= numaratorminute:inst.m2
+m0 <= numaratorminute:inst.m0
+m3 <= numaratorminute:inst.m3
+zm1 <= numaratorminute:inst.zm1
+zm2 <= numaratorminute:inst.zm2
+zm0 <= numaratorminute:inst.zm0
+
+
+|numfinal|numaratorminute:inst
+m1 <= numinvers10:inst1.q1
+set => numinvers10:inst1.set
+set => num6invers:inst.Set
+Tact => Mux21:inst2.I1
+Tact => Mux21:inst3.I1
+clk => Mux21:inst2.I0
+IncrementareUnitatiMinute => Mux21:inst2.A
+reset => numinvers10:inst1.reset
+reset => num6invers:inst.reset
+m2 <= numinvers10:inst1.q2
+m0 <= numinvers10:inst1.q0
+m3 <= numinvers10:inst1.q3
+zm0 <= num6invers:inst.q0
+IncrementareZeciMinute => Mux21:inst3.A
+zm1 <= num6invers:inst.q1
+zm2 <= num6invers:inst.q2
+iesire <= num6invers:inst.q2
+
+
+|numfinal|numaratorminute:inst|numinvers10:inst1
+q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+set => inst.PRESET
+set => inst3.PRESET
+reset => inst.ACLR
+reset => inst1.ACLR
+reset => inst2.ACLR
+reset => inst3.ACLR
+ck => inst15.IN0
+q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|numfinal|numaratorminute:inst|Mux21:inst2
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+I0 => inst3.IN0
+A => inst4.IN0
+A => inst.IN1
+I1 => inst.IN0
+
+
+|numfinal|numaratorminute:inst|num6invers:inst
+q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Set => inst.PRESET
+Set => inst2.PRESET
+reset => inst.ACLR
+reset => inst1.ACLR
+reset => inst2.ACLR
+ck => inst5.IN0
+q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|numfinal|numaratorminute:inst|Mux21:inst3
+Y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+I0 => inst3.IN0
+A => inst4.IN0
+A => inst.IN1
+I1 => inst.IN0
+
+
+|numfinal|numaratorinvers:inst1
+ds1 <= numinvers10:inst.q1
+set => numinvers10:inst.set
+set => numinvers10:inst1.set
+set => num6invers:inst2.Set
+clk => numinvers10:inst.ck
+reset => numinvers10:inst.reset
+reset => numinvers10:inst1.reset
+reset => num6invers:inst2.reset
+ds0 <= numinvers10:inst.q0
+ds3 <= numinvers10:inst.q3
+ds2 <= numinvers10:inst.q2
+s1 <= numinvers10:inst1.q1
+s2 <= numinvers10:inst1.q2
+s0 <= numinvers10:inst1.q0
+s3 <= numinvers10:inst1.q3
+zs2 <= num6invers:inst2.q2
+zs1 <= num6invers:inst2.q1
+zs0 <= num6invers:inst2.q0
+
+
+|numfinal|numaratorinvers:inst1|numinvers10:inst
+q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+set => inst.PRESET
+set => inst3.PRESET
+reset => inst.ACLR
+reset => inst1.ACLR
+reset => inst2.ACLR
+reset => inst3.ACLR
+ck => inst15.IN0
+q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|numfinal|numaratorinvers:inst1|numinvers10:inst1
+q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+set => inst.PRESET
+set => inst3.PRESET
+reset => inst.ACLR
+reset => inst1.ACLR
+reset => inst2.ACLR
+reset => inst3.ACLR
+ck => inst15.IN0
+q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+q3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|numfinal|numaratorinvers:inst1|num6invers:inst2
+q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Set => inst.PRESET
+Set => inst2.PRESET
+reset => inst.ACLR
+reset => inst1.ACLR
+reset => inst2.ACLR
+ck => inst5.IN0
+q1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+
+

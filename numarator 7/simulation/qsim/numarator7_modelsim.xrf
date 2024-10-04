@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, E:/inceput proiect/numarator 7/numarator7.bdf
+source_file = 1, E:/inceput proiect/numarator 7/Waveform.vwf
+source_file = 1, E:/inceput proiect/numarator 7/db/numarator7.cbx.xml
+design_name = hard_block
+design_name = numarator7
+instance = comp, \q0~output\, q0~output, numarator7, 1
+instance = comp, \q1~output\, q1~output, numarator7, 1
+instance = comp, \q2~output\, q2~output, numarator7, 1
+instance = comp, \pin_name1~input\, pin_name1~input, numarator7, 1
+instance = comp, \pin_name1~inputclkctrl\, pin_name1~inputclkctrl, numarator7, 1
+instance = comp, \inst1~0\, inst1~0, numarator7, 1
+instance = comp, \inst2~0\, inst2~0, numarator7, 1
+instance = comp, \inst~0\, inst~0, numarator7, 1
